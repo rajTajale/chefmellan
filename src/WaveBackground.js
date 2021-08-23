@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import cook from "./images/hero-wave2.svg"
-import cook1 from "./images/hero-wave3.svg"
+import cook from "../static/images/hero-wave2.svg"
+import cook1 from "../static/images/hero-wave3.svg"
 
 export default function WaveBackground() {
   return (
