@@ -1,34 +1,51 @@
 import React from "react";
 import styled from "styled-components";
 import content from "../images/one.png";
-import grocery from "../images/kitchen.png";
-import chef from "../images/cook.png";
+import finalLogo from "../images/finalLogo.png";
+import FoodLottie from "../FoodLottie";
+import PreparingLottie from "../PreparingLottie";
+import EatingLottie from "../EatingLottie";
+import WaveBackground from "../WaveBackground";
 
 function IndexPage() {
   return (
     <MainWrapper>
+      <Header>
+        <Logo src={finalLogo} alt="logo"></Logo>
+        <Text>Coming soon !</Text>
+      </Header>
       <Content1>
         <TextWrapper>
           <span>Order your meals from local chefs,</span>
-          <br />
           connecting everyone and building a community.
+          <br />
+          <br />
+          <span>Chefs, don't miss this opportunity.</span>
+          <RegisterButton>Register</RegisterButton>
         </TextWrapper>
-
-        <Image src={content} style={{ top: "50px" }} alt="pix" />
+        <Image src={content} style={{ top: "50px"}} alt="pix" />
       </Content1>
       <Content2>
-        <TextWrapper2>HOW IT WORKS</TextWrapper2>
-        <MenuItems>
-          <Part1>
-            <Groceries src={grocery} style={{ top: "0" }} alt="pix"></Groceries>
-            Make the list of Groceries
-          </Part1>
-          <Part2>
-            <Chef src={chef} style={{ top: "0" }} alt="pix"></Chef>
-            Verified Chefs offers you meal plans
-          </Part2>
-          <Part3>Confirm the meal plan and Enjoy</Part3>
-        </MenuItems>
+        <WaveBackground />
+        <MiniContent>
+          <TextWrapper2>
+            <span>HOW Chefmellan WORKS</span>
+          </TextWrapper2>
+          <MenuItems>
+            <Part1>
+              <FoodLottie className="foodLottie" />
+              Users create a collection of groceries
+            </Part1>
+            <Part2>
+              <PreparingLottie />
+              Verified Chefmellans' offer you meal plans based on your cart
+            </Part2>
+            <Part3>
+              <EatingLottie />
+              Confirm the meal plan and get it delivered
+            </Part3>
+          </MenuItems>
+        </MiniContent>
       </Content2>
     </MainWrapper>
   );
@@ -36,16 +53,79 @@ function IndexPage() {
 
 export default IndexPage;
 
-const Chef = styled.img`
-  margin-top: 20px;
-  height: 200px;
-  width: 200px;
+const MiniContent = styled.div`
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
 `;
 
-const Groceries = styled.img`
-  margin-top: 20px;
-  height: 200px;
-  width: 200px;
+const Text = styled.p`
+  position: absolute;
+  right: 0;
+  margin-right: 7%;
+  font-size: 15px;
+  color: red;
+`;
+
+const RegisterButton = styled.button`
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
+    0px 20px 40px rgba(23, 0, 102, 0.2),
+    inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.5);
+  border-radius: 20px;
+  border: 0px;
+  background: red;
+  margin-top: 25px;
+  font-size: 18px;
+  line-height: 1.47059;
+  font-weight: 800;
+  letter-spacing: 0.022em;
+  font-family: "Montserrat", "SF Pro Text", "SF Pro Icons", "Helvetica Neue",
+    "Helvetica", "Arial", sans-serif;
+  /* background-color: #fff; */
+  color: white;
+  height: 60px;
+  width: 180px;
+
+  *,
+  & {
+    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+
+  :hover {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
+      0px 30px 60px rgba(23, 0, 102, 0.5),
+      inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.5);
+    background: black;
+  }
+
+  @media (max-width: 450px) {
+    width: 280px;
+    height: 80px;
+    grid-template-columns: auto auto;
+    gap: 6px;
+
+    justify-content: center;
+  }
+`;
+
+const Logo = styled.img`
+  height: 150px;
+  width: 150px;
+  margin-left: 9px;
+`;
+
+const Header = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-content: space-between;
+  position: sticky;
+  width: 100vw;
+  background: #f7f3ef;
+  height: 120px;
 `;
 
 const Part1 = styled.div`
@@ -57,10 +137,12 @@ const Part1 = styled.div`
   height: 400px;
   width: 250px;
   margin-top: 4%;
+  font-size: 20px;
 `;
 
 const Part2 = styled.div`
   align-items: center;
+  font-size: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -71,7 +153,11 @@ const Part2 = styled.div`
 `;
 
 const Part3 = styled.div`
-  background: yellow;
+  align-items: center;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
   text-align: center;
   height: 400px;
   width: 250px;
@@ -79,14 +165,16 @@ const Part3 = styled.div`
 `;
 
 const MenuItems = styled.div`
+  
   position: absolute;
   display: flex;
-  justify-content: space-around;
-  width: 80%;
+  align-items: center;
+  justify-items: center;
+  justify-content: space-evenly;
+  width: 100vw;
   height: 500px;
-  margin-top: 12%;
+  margin-top: 15%;
   align-self: center;
-  margin-left: 10%;
 `;
 
 const Image = styled.img`
@@ -95,24 +183,25 @@ const Image = styled.img`
   justify-content: center;
   display: grid;
   left: 45%;
-  height: 600px;
+  margin-top: 5%;
+  height: 550px;
   width: 700px;
   z-index: 1;
 `;
 
 const MainWrapper = styled.div`
+  overflow: hidden;
   display: grid;
   position: relative;
-
+  background-color: #f7f3ef;
   height: 100%;
-  width: 100%;
-  font-size: 28px;
+  width: 100vw;
+  font-size: 23px;
   line-height: 1.47059;
   font-weight: 800;
   letter-spacing: 0.022em;
   font-family: "Montserrat", "SF Pro Text", "SF Pro Icons", "Helvetica Neue",
     "Helvetica", "Arial", sans-serif;
-  /* background-color: #fff; */
   color: #1d1d1f;
 
   @media (max-width: 450px) {
@@ -126,9 +215,17 @@ const MainWrapper = styled.div`
 `;
 
 const Content1 = styled.div`
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background: #f7f3ef;
+  font-size: 23px;
+  line-height: 1.47059;
+  font-weight: 800;
+  letter-spacing: 0.022em;
+  font-family: "Montserrat", "SF Pro Text", "SF Pro Icons", "Helvetica Neue",
+    "Helvetica", "Arial", sans-serif;
+  /* background-color: #fff; */
+  color: #1d1d1f;
   @media (max-width: 450px) {
     overflow: hidden;
     width: 100vw;
@@ -140,20 +237,23 @@ const Content1 = styled.div`
 `;
 
 const TextWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   width: 40%;
+  margin-left: 10px;
   height: 500px;
-  margin-top: 200px;
+  margin-top: 50px;
   padding: 1em;
   z-index: 3;
 
-  font-size: 28px;
+  font-size: 23px;
   line-height: 1.47059;
   font-weight: 800;
   letter-spacing: 0.022em;
   font-family: "Montserrat", "SF Pro Text", "SF Pro Icons", "Helvetica Neue",
     "Helvetica", "Arial", sans-serif;
   /* background-color: #fff; */
-  color: #1d1d1f;
+  color: black;
   span {
     text-shadow: 2px 2px black;
     background: red; /* fallback for old browsers */
@@ -184,28 +284,26 @@ const TextWrapper = styled.div`
 
 const TextWrapper2 = styled.div`
   position: absolute;
-  margin-left: 40%;
-
-  width: 40%;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
   height: 500px;
-  margin-top: 30px;
+  margin-top: 60px;
   padding: 1em;
   z-index: 3;
-
   font-size: 28px;
   line-height: 1.47059;
   font-weight: 800;
-  letter-spacing: 0.022em;
+  letter-spacing: 0.062em;
   font-family: "Montserrat", "SF Pro Text", "SF Pro Icons", "Helvetica Neue",
     "Helvetica", "Arial", sans-serif;
-  color: black;
   span {
     text-shadow: 2px 2px black;
     background: red; /* fallback for old browsers */
     background: -webkit-linear-gradient(
       to right,
-      red,
-      yellow
+      white,
+      green
     ); /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(
       to right,
@@ -230,6 +328,8 @@ const TextWrapper2 = styled.div`
 const Content2 = styled.div`
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
+  z-index: 4;
   background: whitesmoke;
   @media (max-width: 450px) {
     overflow: hidden;
