@@ -1,6 +1,7 @@
 import React from "react";
+import { Link } from "gatsby";
 import styled from "styled-components";
-import content from "../../static/images/one.png";
+import content from "../../static/images/one-edit.jpg";
 import finalLogo from "../../static/images/finalLogo.png";
 import FoodLottie from "../FoodLottie";
 import PreparingLottie from "../PreparingLottie";
@@ -8,6 +9,7 @@ import EatingLottie from "../EatingLottie";
 import WaveBackground from "../WaveBackground";
 
 function IndexPage() {
+  
   return (
     <MainWrapper>
       <Header>
@@ -16,12 +18,12 @@ function IndexPage() {
       </Header>
       <Content1>
         <TextWrapper>
-          <span>Order your meals from local chefs,</span>
-          connecting everyone and building a community.
+          <span>Get your meal plans from the chefs near you.</span>
+          Connecting everyone and building a community.
           <br />
           <br />
           <span>Chefs, don't miss this opportunity.</span>
-          <RegisterButton>Register</RegisterButton>
+          <Link to="/register"><RegisterButton>Register</RegisterButton></Link>
         </TextWrapper>
         <Image src={content} style={{ top: "50px"}} alt="pix" />
       </Content1>
@@ -184,7 +186,7 @@ const Image = styled.img`
   display: grid;
   left: 45%;
   margin-top: 5%;
-  height: 550px;
+  height: 500px;
   width: 700px;
   z-index: 1;
 `;
@@ -205,7 +207,7 @@ const MainWrapper = styled.div`
   color: #1d1d1f;
 
   @media (max-width: 450px) {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
   }
   @media (max-width: 750px) {
