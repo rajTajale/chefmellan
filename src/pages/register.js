@@ -46,26 +46,22 @@ function RegisterPage() {
 
 export default RegisterPage;
 
-const SubmitButton = styled.div`
+const SubmitButton = styled.button`
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
     0px 20px 40px rgba(23, 0, 102, 0.2),
     inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.5);
   margin-left: 20px;
   margin-top: 40px;
+  text-align: center;
   border-radius: 20px;
   background: red;
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  align-content: center;
-
   font-size: 12px;
   font-smooth: inherit;
   font-family: "Montserrat", "SF Pro Text", "SF Pro Icons", "Helvetica Neue",
     "Helvetica", "Arial", sans-serif;
   /* background-color: #fff; */
   color: white;
-  height: 24px;
+  height: 34px;
   left: 35px;
   position: absolute;
   width: 120px;
@@ -83,9 +79,10 @@ const SubmitButton = styled.div`
   }
 
   @media (max-width: 450px) {
-    width: 280px;
-    height: 80px;
-    gap: 6px;
+    width: 100px;
+    height: 40px;
+    font-size: 12px;
+    
   }
 `;
 
@@ -96,6 +93,13 @@ const ContentImage = styled.img`
   height: 500px;
   width: 700px;
   z-index: 1;
+
+  @media (max-width: 450px) {
+    height: 250px;
+    width: 350px;
+    right: 0;
+    bottom: 0;
+  }
 `;
 
 const ImageContent = styled.div`
@@ -104,6 +108,12 @@ const ImageContent = styled.div`
   height: 600px;
   width: 49%;
   right: 0;
+
+  @media (max-width: 450px) {
+    height: 400px;
+    width: 49%;
+    top: 60%;
+  }
 `;
 
 const RegisterForm = styled.div`
@@ -115,13 +125,22 @@ const RegisterForm = styled.div`
   justify-self: flex-start;
   height: 400px;
   width: 70%;
-  font-size: 18px;
+ 
+
+  @media (max-width: 450px) {
+    font-size: 14px;
+  }
 `;
 
 const Logo = styled.img`
   height: 150px;
   width: 150px;
   margin-left: 9px;
+
+  @media (max-width: 450px) {
+    height: 150px;
+    width: 150px;
+  }
 `;
 
 const Header = styled.div`
@@ -133,6 +152,13 @@ const Header = styled.div`
   width: 100%;
   background: #f7f3ef;
   height: 120px;
+  @media (max-width: 768px) {
+    top: 30px;
+  }
+  @media (max-width: 450px) {
+    flex-direction: column;
+    top: 0;
+  }
 `;
 
 const Content = styled.div`
@@ -143,10 +169,15 @@ const Content = styled.div`
   height: 100vh;
   width: 50%;
   //background: #f7f3ef;
-  font-size: 23px;
+  font-size: 18px;
+
   @media (max-width: 450px) {
+    font-size: 16px;
+    margin-top: 100px;
     overflow: hidden;
+    height: 50vh;
     width: 100vw;
+    align-items: center;
   }
   @media (max-width: 750px) {
     overflow-x: hidden;
@@ -158,6 +189,10 @@ const Content = styled.div`
     top: 40px;
     left: 20px;
     color: black;
+    @media (max-width: 450px) {
+        left: 0;
+        font-size: 15px;
+  }
   }
 `;
 
@@ -176,11 +211,13 @@ const Wrapper = styled.div`
   color: #1d1d1f;
 
   @media (max-width: 450px) {
+    display: flex;
+    flex-direction: column;
     height: 100vh;
     width: 100vw;
   }
   @media (max-width: 750px) {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
   }
 `;

@@ -9,7 +9,6 @@ import EatingLottie from "../EatingLottie";
 import WaveBackground from "../WaveBackground";
 
 function IndexPage() {
-  
   return (
     <MainWrapper>
       <Header>
@@ -23,9 +22,11 @@ function IndexPage() {
           <br />
           <br />
           <span>Chefs, don't miss this opportunity.</span>
-          <Link to="/register"><RegisterButton>Register</RegisterButton></Link>
+          <Link to="/register">
+            <RegisterButton>Register</RegisterButton>
+          </Link>
         </TextWrapper>
-        <Image src={content} style={{ top: "50px"}} alt="pix" />
+        <Image src={content} style={{ top: "50px" }} alt="pix" />
       </Content1>
       <Content2>
         <WaveBackground />
@@ -39,11 +40,11 @@ function IndexPage() {
               Users create a collection of groceries
             </Part1>
             <Part2>
-              <PreparingLottie />
+              <PreparingLottie className="preparingLottie" />
               Verified Chefmellans' offer you meal plans based on your cart
             </Part2>
             <Part3>
-              <EatingLottie />
+              <EatingLottie className="eatingLottie" />
               Confirm the meal plan and get it delivered
             </Part3>
           </MenuItems>
@@ -62,6 +63,11 @@ const MiniContent = styled.div`
   bottom: 0;
   left: 0;
   z-index: 3;
+
+  @media (max-width: 450px) {
+    display: flex;
+    flex-direction: row;
+  }
 `;
 
 const Text = styled.p`
@@ -70,6 +76,11 @@ const Text = styled.p`
   margin-right: 7%;
   font-size: 15px;
   color: red;
+  @media (max-width: 768px) {
+  }
+  @media (max-width: 450px) {
+    visibility: hidden;
+  }
 `;
 
 const RegisterButton = styled.button`
@@ -77,10 +88,9 @@ const RegisterButton = styled.button`
     0px 20px 40px rgba(23, 0, 102, 0.2),
     inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.5);
   border-radius: 20px;
-  border: 0px;
   background: red;
   margin-top: 25px;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 1.47059;
   font-weight: 800;
   letter-spacing: 0.022em;
@@ -88,8 +98,8 @@ const RegisterButton = styled.button`
     "Helvetica", "Arial", sans-serif;
   /* background-color: #fff; */
   color: white;
-  height: 60px;
-  width: 180px;
+  height: 50px;
+  width: 160px;
 
   *,
   & {
@@ -104,12 +114,12 @@ const RegisterButton = styled.button`
   }
 
   @media (max-width: 450px) {
-    width: 280px;
-    height: 80px;
-    grid-template-columns: auto auto;
-    gap: 6px;
-
+    width: 160px;
+    height: 40px;
     justify-content: center;
+    margin-top: 50px;
+    font-size: 14px;
+    margin-left: 45%;
   }
 `;
 
@@ -128,6 +138,13 @@ const Header = styled.div`
   width: 100vw;
   background: #f7f3ef;
   height: 120px;
+  @media (max-width: 768px) {
+    top: 30px;
+  }
+  @media (max-width: 450px) {
+    flex-direction: column;
+    top: 0;
+  }
 `;
 
 const Part1 = styled.div`
@@ -140,6 +157,17 @@ const Part1 = styled.div`
   width: 250px;
   margin-top: 4%;
   font-size: 20px;
+
+  @media (max-width: 450px) {
+    font-size: 16px;
+    height: 150px;
+    width: 250px;
+
+    .foodLottie {
+      height: 10px;
+      width: 150px;
+    }
+  }
 `;
 
 const Part2 = styled.div`
@@ -152,6 +180,12 @@ const Part2 = styled.div`
   height: 400px;
   width: 250px;
   margin-top: 4%;
+
+  @media (max-width: 450px) {
+    font-size: 16px;
+    height: 150px;
+    width: 250px;
+  }
 `;
 
 const Part3 = styled.div`
@@ -164,12 +198,18 @@ const Part3 = styled.div`
   height: 400px;
   width: 250px;
   margin-top: 4%;
+
+  @media (max-width: 450px) {
+    font-size: 16px;
+    height: 150px;
+    width: 250px;
+  }
 `;
 
 const MenuItems = styled.div`
-  
   position: absolute;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-items: center;
   justify-content: space-evenly;
@@ -177,18 +217,35 @@ const MenuItems = styled.div`
   height: 500px;
   margin-top: 15%;
   align-self: center;
+
+  @media (max-width: 450px) {
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 9em;
+    margin-top: 5%;
+    
+    transform: scale(0.6);
+    
+  }
 `;
 
 const Image = styled.img`
   background-image: url("../images/two.png");
   position: absolute;
   justify-content: center;
-  display: grid;
   left: 45%;
   margin-top: 5%;
   height: 500px;
   width: 700px;
   z-index: 1;
+
+  @media (max-width: 450px) {
+    width: 200px;
+    height: 180px;
+    margin-top: 70%;
+    left: 40%;
+    bottom: 0;
+  }
 `;
 
 const MainWrapper = styled.div`
@@ -207,11 +264,12 @@ const MainWrapper = styled.div`
   color: #1d1d1f;
 
   @media (max-width: 450px) {
+    display: flex;
     height: 100%;
-    width: 100vw;
+    flex-direction: column;
   }
   @media (max-width: 750px) {
-    height: 100vh;
+    height: 100%;
     width: 100vw;
   }
 `;
@@ -228,9 +286,11 @@ const Content1 = styled.div`
     "Helvetica", "Arial", sans-serif;
   /* background-color: #fff; */
   color: #1d1d1f;
+
   @media (max-width: 450px) {
-    overflow: hidden;
-    width: 100vw;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
   }
   @media (max-width: 750px) {
     overflow-x: hidden;
@@ -247,7 +307,6 @@ const TextWrapper = styled.div`
   margin-top: 50px;
   padding: 1em;
   z-index: 3;
-
   font-size: 23px;
   line-height: 1.47059;
   font-weight: 800;
@@ -276,11 +335,14 @@ const TextWrapper = styled.div`
     font-size: 33px;
 
     @media (max-width: 450px) {
-      font-size: 35px;
+      font-size: 18px;
     }
   }
+
   @media (max-width: 450px) {
-    font-size: 32px;
+    font-size: 16px;
+    height: 400px;
+    gap: 1em;
   }
 `;
 
@@ -291,12 +353,9 @@ const TextWrapper2 = styled.div`
   width: 100%;
   height: 500px;
   margin-top: 60px;
-  padding: 1em;
   z-index: 3;
-  font-size: 28px;
-  line-height: 1.47059;
   font-weight: 800;
-  letter-spacing: 0.062em;
+
   font-family: "Montserrat", "SF Pro Text", "SF Pro Icons", "Helvetica Neue",
     "Helvetica", "Arial", sans-serif;
   span {
@@ -316,14 +375,17 @@ const TextWrapper2 = styled.div`
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
-    font-size: 33px;
+    font-size: 30px;
 
     @media (max-width: 450px) {
-      font-size: 35px;
+      font-size: 20px;
     }
   }
+
   @media (max-width: 450px) {
-    font-size: 32px;
+    height: 200px;
+    font-size: 16px;
+    margin-top: 80px;
   }
 `;
 
@@ -333,12 +395,13 @@ const Content2 = styled.div`
   overflow: hidden;
   z-index: 4;
   background: whitesmoke;
+
   @media (max-width: 450px) {
-    overflow: hidden;
-    width: 100vw;
+    display: flex;
+    flex-direction: row;
   }
   @media (max-width: 750px) {
-    overflow-x: hidden;
+    height: 100vh;
     width: 100vw;
   }
 `;
