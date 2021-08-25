@@ -10,7 +10,7 @@ function IndexPage() {
   return (
     <MainWrapper>
       <Header>
-        <Logo src="/images/finalLogo-edit.jpg" alt="logo"></Logo>
+        <Logo src="/images/finalLogo-edit.svg" alt="logo"></Logo>
         <Text>Coming soon !</Text>
       </Header>
       <Content1>
@@ -125,6 +125,7 @@ const Logo = styled.img`
   height: 150px;
   width: 150px;
   margin-left: 9px;
+  background-color: #f7f3ef;
 `;
 
 const Header = styled.div`
@@ -219,7 +220,7 @@ const MenuItems = styled.div`
   @media (max-width: 450px) {
     flex-direction: column;
     justify-content: space-evenly;
-    gap: 9em;
+    gap: 8em;
     margin-top: 5%;
     
     transform: scale(0.6);
@@ -239,7 +240,7 @@ const Image = styled.img`
   @media (max-width: 450px) {
     width: 200px;
     height: 180px;
-    margin-top: 70%;
+    margin-top: 60%;
     left: 40%;
     bottom: 0;
   }

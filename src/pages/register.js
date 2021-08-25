@@ -1,14 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
-import { FormGroup, Label, Input} from "../Forms";
+import { FormGroup, Label, Input } from "../Forms";
 
 function RegisterPage() {
   return (
     <Wrapper>
       <Header>
         <Link to="/">
-          <Logo src="/images/finalLogo-edit.jpg" alt="logo"></Logo>
+          <Logo src="/images/finalLogo-edit.svg" alt="logo"></Logo>
         </Link>
       </Header>
       <Content>
@@ -20,11 +20,11 @@ function RegisterPage() {
           </FormGroup>
           <FormGroup>
             <Label htmlFor="email">Email address</Label>
-            <Input  id="email"/>
+            <Input id="email" />
           </FormGroup>
           <FormGroup>
             <Label htmlFor="cuisines">Interested cuisines</Label>
-            <Input id="cuisines"/>
+            <Input id="cuisines" />
           </FormGroup>
           <Link to="/" style={{ textDecoration: "none" }}>
             <SubmitButton>Submit</SubmitButton>
@@ -80,7 +80,6 @@ const SubmitButton = styled.button`
     width: 100px;
     height: 40px;
     font-size: 12px;
-    
   }
 `;
 
@@ -123,7 +122,6 @@ const RegisterForm = styled.div`
   justify-self: flex-start;
   height: 400px;
   width: 70%;
- 
 
   @media (max-width: 450px) {
     font-size: 14px;
@@ -188,9 +186,9 @@ const Content = styled.div`
     left: 20px;
     color: black;
     @media (max-width: 450px) {
-        left: 0;
-        font-size: 15px;
-  }
+      left: 0;
+      font-size: 15px;
+    }
   }
 `;
 
