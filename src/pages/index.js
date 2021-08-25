@@ -10,7 +10,7 @@ function IndexPage() {
   return (
     <MainWrapper>
       <Header>
-        <Logo src="/images/finalLogo.png" alt="logo"></Logo>
+        <Logo src="/images/finalLogo-edit.jpg" alt="logo"></Logo>
         <Text>Coming soon !</Text>
       </Header>
       <Content1>
