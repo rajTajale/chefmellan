@@ -132,10 +132,11 @@ const Logo = styled.img`
   height: 150px;
   width: 150px;
   margin-left: 9px;
+  object-fit: fill;
 
   @media (max-width: 450px) {
-    height: 150px;
-    width: 150px;
+    height: 200px;
+  width: 200px;
   }
 `;
 

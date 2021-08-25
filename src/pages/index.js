@@ -125,6 +125,7 @@ const Logo = styled.img`
   height: 150px;
   width: 150px;
   margin-left: 9px;
+  object-fit: fill;
   background-color: #f7f3ef;
 `;
 
