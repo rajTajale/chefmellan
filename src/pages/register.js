@@ -48,7 +48,6 @@ const SubmitButton = styled.button`
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1),
     0px 20px 40px rgba(23, 0, 102, 0.2),
     inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.5);
-  margin-left: 20px;
   margin-top: 40px;
   text-align: center;
   border-radius: 20px;
@@ -60,9 +59,8 @@ const SubmitButton = styled.button`
   /* background-color: #fff; */
   color: white;
   height: 34px;
-  left: 35px;
   position: absolute;
-  width: 120px;
+  width: 200px;
 
   *,
   & {
@@ -77,10 +75,11 @@ const SubmitButton = styled.button`
   }
 
   @media (max-width: 450px) {
-    width: 160px;
+    width: 220px;
     height: 40px;
     font-size: 14px;
-    margin-left: 0;
+    margin-top:2.2em;
+    
   }
 `;
 
@@ -126,7 +125,10 @@ const RegisterForm = styled.div`
   width: 70%;
 
   @media (max-width: 450px) {
+    margin-top: 0;
     font-size: 14px;
+    justify-content: center;
+    justify-self: center;
   }
 `;
 
@@ -172,9 +174,9 @@ const Content = styled.div`
 
   @media (max-width: 450px) {
     font-size: 16px;
-    margin-top: 150px;
+    margin-top: 120px;
     height: 100%;
-    width: 100%;
+    width: 50%;
     align-items: center;
     background: black;
     background-image: url("/images/newbg.jpg");
@@ -188,9 +190,22 @@ const Content = styled.div`
   }
 
   span {
+    background: red; /* fallback for old browsers */
+    background: -webkit-linear-gradient(
+      to right,
+      red,
+      yellow
+    ); /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(
+      to right,
+      orange,
+      lightblue
+    ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    background-clip: text;
+    -webkit-background-clip: text;
     position: relative;
     top: 40px;
-    left: 20px;
     color: black;
     @media (max-width: 450px) {
       left: -20px;

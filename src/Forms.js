@@ -8,8 +8,7 @@ export const FormGroup = styled.div`
 
   @media (max-width: 450px) {
     width: 200px;
-
-    margin-top: 5px;
+    margin-top: 0.2em;
   }
 `;
 
