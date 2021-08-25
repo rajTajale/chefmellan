@@ -10,7 +10,7 @@ function IndexPage() {
   return (
     <MainWrapper>
       <Header>
-        <Logo src="/images/chefff.svg" alt="logo"></Logo>
+        <Logo src="/images/mylogo2.png" alt="logo"></Logo>
         <Text>Coming soon !</Text>
       </Header>
       <Content1>
@@ -123,7 +123,7 @@ const RegisterButton = styled.button`
 const Logo = styled.img`
   height: 150px;
   width: 150px;
-  margin-left: 9px;
+  margin-left: 19px;
   object-fit: fill;
   background-color: #f7f3ef;
 
@@ -276,6 +276,7 @@ const MainWrapper = styled.div`
 const Content1 = styled.div`
   height: 100%;
   width: 100%;
+  overflow: hidden;
   background: #f7f3ef;
   font-size: 23px;
   line-height: 1.47059;

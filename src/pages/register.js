@@ -8,7 +8,7 @@ function RegisterPage() {
     <Wrapper>
       <Header>
         <Link to="/">
-          <Logo src="/images/chefff.svg" alt="logo"></Logo>
+          <Logo src="/images/mylogo2.png" alt="logo"></Logo>
         </Link>
       </Header>
       <Content>
@@ -78,8 +78,7 @@ const SubmitButton = styled.button`
     width: 220px;
     height: 40px;
     font-size: 14px;
-    margin-top:2.2em;
-    
+    margin-top: 2.2em;
   }
 `;
 
@@ -136,7 +135,7 @@ const Logo = styled.img`
   height: 150px;
   width: 150px;
   margin-left: 9px;
-  object-fit: fill;
+  object-fit: contain;
 
   @media (max-width: 450px) {
     margin-left: -10px;
@@ -174,7 +173,7 @@ const Content = styled.div`
 
   @media (max-width: 450px) {
     font-size: 16px;
-    margin-top: 120px;
+    margin-top: 150px;
     height: 100%;
     width: 50%;
     align-items: center;
