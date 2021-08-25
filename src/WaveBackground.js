@@ -1,14 +1,12 @@
 import React from "react";
 import styled from "styled-components";
-import cook from "../src/static/images/hero-wave2.svg"
-import cook1 from "../src/static/images/hero-wave3.svg"
 
 export default function WaveBackground() {
   return (
     <Wrapper>
       <Background />
-      <Wave src={cook} style={{ top: "350px", filter: `blur(0px)`}} />
-      <Wave src={cook1} style={{ top: "350px", filter: `blur(40px)`}} />
+      <Wave src="/images/hero-wave2.svg" style={{ top: "350px", filter: `blur(0px)`}} />
+      <Wave src="/images/hero-wave3.svg" style={{ top: "350px", filter: `blur(40px)`}} />
     </Wrapper>
   );
 }

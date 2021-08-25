@@ -1,8 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
-import content from "../static/images/one-edit.jpg";
-import finalLogo from "../static/images/finalLogo.png";
 import FoodLottie from "../FoodLottie";
 import PreparingLottie from "../PreparingLottie";
 import EatingLottie from "../EatingLottie";
@@ -12,7 +10,7 @@ function IndexPage() {
   return (
     <MainWrapper>
       <Header>
-        <Logo src={finalLogo} alt="logo"></Logo>
+        <Logo src="/images/finalLogo.png" alt="logo"></Logo>
         <Text>Coming soon !</Text>
       </Header>
       <Content1>
@@ -26,7 +24,7 @@ function IndexPage() {
             <RegisterButton>Register</RegisterButton>
           </Link>
         </TextWrapper>
-        <Image src={content} style={{ top: "50px" }} alt="pix" />
+        <Image src="/images/one-edit.jpg" style={{ top: "50px" }} alt="pix" />
       </Content1>
       <Content2>
         <WaveBackground />
@@ -117,7 +115,7 @@ const RegisterButton = styled.button`
     width: 160px;
     height: 40px;
     justify-content: center;
-    margin-top: 50px;
+    margin-top: 10px;
     font-size: 14px;
     margin-left: 45%;
   }
@@ -230,7 +228,6 @@ const MenuItems = styled.div`
 `;
 
 const Image = styled.img`
-  background-image: url("../images/two.png");
   position: absolute;
   justify-content: center;
   left: 45%;

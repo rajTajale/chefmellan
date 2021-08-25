@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
-import finalLogo from "../static/images/finalLogo.png";
-import content from "../static/images/bg2-edit2.jpg";
 import { FormGroup, Label, Input} from "../Forms";
 
 function RegisterPage() {
@@ -10,7 +8,7 @@ function RegisterPage() {
     <Wrapper>
       <Header>
         <Link to="/">
-          <Logo src={finalLogo} alt="logo"></Logo>
+          <Logo src="/images/finalLogo.png" alt="logo"></Logo>
         </Link>
       </Header>
       <Content>
@@ -35,7 +33,7 @@ function RegisterPage() {
       </Content>
       <ImageContent>
         <ContentImage
-          src={content}
+          src="/images/bg2-edit2.jpg"
           style={{ top: "50px" }}
           alt="pix"
         ></ContentImage>
