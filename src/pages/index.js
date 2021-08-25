@@ -165,11 +165,7 @@ const Part1 = styled.div`
     font-size: 16px;
     height: 150px;
     width: 250px;
-
-    .foodLottie {
-      height: 10px;
-      width: 150px;
-    }
+    margin-top: 0;
   }
 `;
 
@@ -188,6 +184,7 @@ const Part2 = styled.div`
     font-size: 16px;
     height: 150px;
     width: 250px;
+    margin-top: 0;
   }
 `;
 
@@ -206,6 +203,7 @@ const Part3 = styled.div`
     font-size: 16px;
     height: 150px;
     width: 250px;
+    margin-top: 0;
   }
 `;
 
@@ -214,7 +212,6 @@ const MenuItems = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-items: center;
   justify-content: space-evenly;
   width: 100vw;
   height: 500px;
@@ -223,10 +220,9 @@ const MenuItems = styled.div`
 
   @media (max-width: 450px) {
     flex-direction: column;
-    justify-content: space-evenly;
-    gap: 8em;
-    margin-top: 5%;
-
+    justify-content: space-between;
+    height: 90%;
+    margin-top: 0;
     transform: scale(0.6);
   }
 `;
@@ -387,9 +383,9 @@ const TextWrapper2 = styled.div`
   }
 
   @media (max-width: 450px) {
-    height: 200px;
+    height: 20px;
     font-size: 16px;
-    margin-top: 80px;
+    margin-top: 100px;
   }
 `;
 
@@ -403,9 +399,8 @@ const Content2 = styled.div`
   @media (max-width: 450px) {
     display: flex;
     flex-direction: row;
+    flex-shrink: 2;
   }
   @media (max-width: 750px) {
-    height: 100vh;
-    width: 100vw;
   }
 `;
