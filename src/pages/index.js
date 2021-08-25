@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "gatsby";
 import styled from "styled-components";
-import content from "../../static/images/one-edit.jpg";
-import finalLogo from "../../static/images/finalLogo.png";
+import content from "../static/images/one-edit.jpg";
+import finalLogo from "../static/images/finalLogo.png";
 import FoodLottie from "../FoodLottie";
 import PreparingLottie from "../PreparingLottie";
 import EatingLottie from "../EatingLottie";

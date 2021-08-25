@@ -1,6 +1,5 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.yourdomain.tld",
     title: "chefmellan",
   },
   plugins: [
@@ -13,9 +12,9 @@ module.exports = {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: `${__dirname}/static/images`,
+        path: `${__dirname}/src/static/images`,
       },
-      
     },
+    `gatsby-plugin-styled-components`,
   ],
 };

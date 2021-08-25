@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 
 export const FormGroup = styled.div`
@@ -10,7 +9,7 @@ export const FormGroup = styled.div`
 
   @media (max-width: 450px) {
     width: 200px;
-    
+
     margin-top: 5px;
   }
 `;

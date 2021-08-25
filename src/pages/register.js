@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
-import finalLogo from "../../static/images/finalLogo.png";
-import content from "../../static/images/bg2-edit2.jpg";
-import { FormGroup, Label, Input, Message } from "../Forms";
+import finalLogo from "../static/images/finalLogo.png";
+import content from "../static/images/bg2-edit2.jpg";
+import { FormGroup, Label, Input} from "../Forms";
 
 function RegisterPage() {
   return (
@@ -21,12 +21,12 @@ function RegisterPage() {
             <Input id="label" />
           </FormGroup>
           <FormGroup>
-            <Label>Email address</Label>
-            <Input />
+            <Label htmlFor="email">Email address</Label>
+            <Input  id="email"/>
           </FormGroup>
           <FormGroup>
-            <Label>Interested cusines</Label>
-            <Input />
+            <Label htmlFor="cuisines">Interested cuisines</Label>
+            <Input id="cuisines"/>
           </FormGroup>
           <Link to="/" style={{ textDecoration: "none" }}>
             <SubmitButton>Submit</SubmitButton>
