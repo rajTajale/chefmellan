@@ -8,7 +8,7 @@ function RegisterPage() {
     <Wrapper>
       <Header>
         <Link to="/">
-          <Logo src="/images/finalLogo-edit.svg" alt="logo"></Logo>
+          <Logo src="/images/finalLogo.png" alt="logo"></Logo>
         </Link>
       </Header>
       <Content>
@@ -77,9 +77,10 @@ const SubmitButton = styled.button`
   }
 
   @media (max-width: 450px) {
-    width: 100px;
+    width: 160px;
     height: 40px;
-    font-size: 12px;
+    font-size: 14px;
+    margin-left: 0;
   }
 `;
 
@@ -107,6 +108,7 @@ const ImageContent = styled.div`
   right: 0;
 
   @media (max-width: 450px) {
+    visibility: hidden;
     height: 400px;
     width: 49%;
     top: 60%;
@@ -135,8 +137,7 @@ const Logo = styled.img`
   object-fit: fill;
 
   @media (max-width: 450px) {
-    height: 200px;
-  width: 200px;
+    margin-left: -10px;
   }
 `;
 
@@ -159,6 +160,7 @@ const Header = styled.div`
 `;
 
 const Content = styled.div`
+  overflow: hidden;
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -170,11 +172,15 @@ const Content = styled.div`
 
   @media (max-width: 450px) {
     font-size: 16px;
-    margin-top: 100px;
-    overflow: hidden;
-    height: 50vh;
-    width: 100vw;
+    margin-top: 150px;
+    height: 100%;
+    width: 100%;
     align-items: center;
+    background: black;
+    background-image: url("/images/newbg.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
   }
   @media (max-width: 750px) {
     overflow-x: hidden;
@@ -187,7 +193,7 @@ const Content = styled.div`
     left: 20px;
     color: black;
     @media (max-width: 450px) {
-      left: 0;
+      left: -20px;
       font-size: 15px;
     }
   }

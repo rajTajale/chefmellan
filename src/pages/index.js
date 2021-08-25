@@ -10,7 +10,7 @@ function IndexPage() {
   return (
     <MainWrapper>
       <Header>
-        <Logo src="/images/finalLogo-edit.svg" alt="logo"></Logo>
+        <Logo src="/images/finalLogo.png" alt="logo"></Logo>
         <Text>Coming soon !</Text>
       </Header>
       <Content1>
@@ -112,13 +112,11 @@ const RegisterButton = styled.button`
   }
 
   @media (max-width: 450px) {
-   margin-left: 60px;
     width: 160px;
     height: 40px;
     justify-content: center;
-    margin-top: 90px;
+    margin-top: 50px;
     font-size: 14px;
-    
   }
 `;
 
@@ -128,6 +126,10 @@ const Logo = styled.img`
   margin-left: 9px;
   object-fit: fill;
   background-color: #f7f3ef;
+
+  @media (max-width: 450px) {
+    margin-left: -10px;
+  }
 `;
 
 const Header = styled.div`
@@ -224,15 +226,14 @@ const MenuItems = styled.div`
     justify-content: space-evenly;
     gap: 8em;
     margin-top: 5%;
-    
+
     transform: scale(0.6);
-    
   }
 `;
 
 const Image = styled.img`
   position: absolute;
-  visibility: hidden;
+
   justify-content: center;
   left: 45%;
   margin-top: 5%;
@@ -241,6 +242,7 @@ const Image = styled.img`
   z-index: 1;
 
   @media (max-width: 450px) {
+    visibility: hidden;
     width: 200px;
     height: 180px;
     margin-top: 60%;
@@ -295,7 +297,7 @@ const Content1 = styled.div`
   }
   @media (max-width: 750px) {
     overflow-x: hidden;
-    width: 100vw;
+    width: 100%;
   }
 `;
 
@@ -343,7 +345,7 @@ const TextWrapper = styled.div`
   @media (max-width: 450px) {
     font-size: 16px;
     height: 400px;
-    width: 100%;
+    width: 80%;
     gap: 1em;
   }
 `;

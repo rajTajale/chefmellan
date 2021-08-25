@@ -5,7 +5,6 @@ export const FormGroup = styled.div`
   display: block;
   width: 200px;
   margin-top: 20px;
-  margin-left: 20px;
 
   @media (max-width: 450px) {
     width: 200px;
