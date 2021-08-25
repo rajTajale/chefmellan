@@ -8,7 +8,7 @@ function RegisterPage() {
     <Wrapper>
       <Header>
         <Link to="/">
-          <Logo src="/images/finalLogo.png" alt="logo"></Logo>
+          <Logo src="/images/chefff.svg" alt="logo"></Logo>
         </Link>
       </Header>
       <Content>
