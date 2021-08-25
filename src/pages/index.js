@@ -112,12 +112,13 @@ const RegisterButton = styled.button`
   }
 
   @media (max-width: 450px) {
+   margin-left: 60px;
     width: 160px;
     height: 40px;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 90px;
     font-size: 14px;
-    margin-left: 45%;
+    
   }
 `;
 
@@ -231,6 +232,7 @@ const MenuItems = styled.div`
 
 const Image = styled.img`
   position: absolute;
+  visibility: hidden;
   justify-content: center;
   left: 45%;
   margin-top: 5%;
@@ -341,6 +343,7 @@ const TextWrapper = styled.div`
   @media (max-width: 450px) {
     font-size: 16px;
     height: 400px;
+    width: 100%;
     gap: 1em;
   }
 `;
