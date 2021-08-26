@@ -30,7 +30,7 @@ function IndexPage() {
         <WaveBackground />
         <MiniContent>
           <TextWrapper2>
-            <span>HOW Chefmellan WORKS</span>
+            <span>HOW chefmellan WORKS</span>
           </TextWrapper2>
           <MenuItems>
             <Part1>
@@ -86,6 +86,8 @@ const RegisterButton = styled.button`
     0px 20px 40px rgba(23, 0, 102, 0.2),
     inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.5);
   border-radius: 20px;
+  opacity: 80%;
+  border: 0;
   background: red;
   margin-top: 25px;
   font-size: 16px;
@@ -221,9 +223,9 @@ const MenuItems = styled.div`
   @media (max-width: 450px) {
     flex-direction: column;
     justify-content: space-between;
-    height: 90%;
-    margin-top: 0;
-    transform: scale(0.6);
+    min-height: 100%;
+    margin-top: -10px;
+    transform: scale(0.7);
   }
 `;
 
@@ -289,12 +291,13 @@ const Content1 = styled.div`
 
   @media (max-width: 450px) {
     font-size: 16px;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     background-image: url("/images/firstbg2.png");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover; /* Resize the background image to cover the entire c
+    background-size: cover; /* Resize the background image to cover the entire c */
   }
   @media (max-width: 750px) {
     overflow-x: hidden;
@@ -390,7 +393,7 @@ const TextWrapper2 = styled.div`
   @media (max-width: 450px) {
     height: 20px;
     font-size: 16px;
-    margin-top: 100px;
+    margin-top: 50px;
   }
 `;
 

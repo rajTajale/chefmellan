@@ -49,7 +49,9 @@ const SubmitButton = styled.button`
     0px 20px 40px rgba(23, 0, 102, 0.2),
     inset 0px 0px 0px 0.5px rgba(255, 255, 255, 0.5);
   margin-top: 40px;
+  opacity: 80%;
   text-align: center;
+  border: 0;
   border-radius: 20px;
   background: red;
   font-size: 12px;
