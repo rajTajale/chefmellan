@@ -294,7 +294,7 @@ const Content1 = styled.div`
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url("/images/firstbg2.png");
+    background-image: url("/images/finalbg.png");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire c */
