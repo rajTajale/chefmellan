@@ -291,6 +291,10 @@ const Content1 = styled.div`
     font-size: 16px;
     display: flex;
     flex-direction: column;
+    background-image: url("/images/firstbg2.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire c
   }
   @media (max-width: 750px) {
     overflow-x: hidden;
